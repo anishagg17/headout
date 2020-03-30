@@ -1,26 +1,22 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import axios from "axios";
+import "./App.css";
+import SearchBar from "./components/SearchBar";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+export default () => {
+  const handleSubmit = async searchTerm => {
+    const {
+      data: { items: videos },
+    } = await axios.get("https://www.googleapis.com/youtube/v3/search", {
+      params: {
+        part: "snippet",
+        maxResults: 5,
+        key: "AIzaSyCx3f7HDsrFgUZDx7hyepXvinea6M6MWQU",
+        q: searchTerm,
+      },
+    });
+    console.log("videos", videos);
+  };
 
-export default App;
+  return <SearchBar onSubmit={handleSubmit} />;
+};
