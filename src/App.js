@@ -1,9 +1,21 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
+import styled from "styled-components";
 import "./App.css";
+
 import SearchBar from "./components/SearchBar";
+import VideoDetail from "./components/VideoDetail";
+import VideoList from "./components/VideoList";
+
+const Flex = styled.div`
+  display: flex;
+  width: 100%;
+`;
 
 export default () => {
+  const [videos, setVideos] = useState([]);
+  const [selectedVideo, setSelectedVideo] = useState(null);
+
   const handleSubmit = async searchTerm => {
     const {
       data: { items: videos },
@@ -16,7 +28,21 @@ export default () => {
       },
     });
     console.log("videos", videos);
+    setVideos(videos);
+    setSelectedVideo(videos[0]);
   };
 
-  return <SearchBar onSubmit={handleSubmit} />;
+  useEffect(() => {
+    handleSubmit("headout");
+  }, []);
+
+  return (
+    <div>
+      <SearchBar onSubmit={handleSubmit} />
+      <Flex>
+        <VideoDetail video={selectedVideo} />
+        <VideoList videos={videos} onVideoSelect={setSelectedVideo} />
+      </Flex>
+    </div>
+  );
 };

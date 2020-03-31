@@ -36,6 +36,7 @@ const Container = styled.div`
   transition: box-shadow 300ms;
   background-color: #fff;
   display: block;
+  margin: 2rem;
   padding: 25px;
 `;
 
