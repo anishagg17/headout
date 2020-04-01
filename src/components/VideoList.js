@@ -15,6 +15,7 @@ const Flex = styled.div`
     flex-direction: row;
   }
 `;
+
 export default ({ videos, onVideoSelect }) => {
   const videoList = videos.map(video => (
     <VideoItem

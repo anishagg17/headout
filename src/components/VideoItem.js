@@ -15,7 +15,8 @@ const Container = styled.div`
   align-items: center;
   cursor: pointer;
   @media screen and (max-width: 992px) {
-    width: 60%;
+    width: 70%;
+    // height: 70%;
   }
 `;
 
@@ -26,10 +27,17 @@ const Img = styled.img`
   background-repeat: no-repeat;
   background-position: center;
   margin-right: 20px;
+  @media screen and (max-width: 992px) {
+    height: 7rem;
+    width: 60%;
+  }
 `;
 
 const Bold = styled.b`
   padding: 1px 5px;
+  @media screen and (max-width: 992px) {
+    font-size: 10px;
+  }
 `;
 
 export default ({ video, onVideoSelect }) => {
