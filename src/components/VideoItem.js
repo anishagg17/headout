@@ -36,7 +36,7 @@ const Img = styled.img`
 const Bold = styled.b`
   padding: 1px 5px;
   @media screen and (max-width: 992px) {
-    font-size: 10px;
+    font-size: 11px;
   }
 `;
 

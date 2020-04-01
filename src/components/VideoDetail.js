@@ -13,9 +13,18 @@ const Container = styled.div`
   margin: 2rem;
 `;
 
+const Desc = styled.div`
+  margin-top: 1rem;
+  @media screen and (max-width: 992px) {
+    font-size: 0.8rem;
+  }
+`;
 const Title = styled.div`
   font-size: 1.7rem;
   // font-family: monospace;
+  @media screen and (max-width: 992px) {
+    font-size: 1.1rem;
+  }
 `;
 
 const Center = styled.div`
@@ -54,7 +63,7 @@ export default ({ video }) => {
         <Title>
           {video.snippet.title} <b>{video.snippet.channelTitle}</b>
         </Title>
-        <div style={{ marginTop: "1rem" }}>{video.snippet.description}</div>
+        <Desc>{video.snippet.description}</Desc>
       </Container>
     </div>
   );
