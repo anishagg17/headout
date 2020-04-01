@@ -14,6 +14,12 @@ const Search = styled.input`
   text-align: start;
   cursor: text;
   font-size: inherit;
+
+  @media screen and (max-width: 700px) {
+    padding: 10px 0px;
+    overflow: hidden;
+  }
+
   :focus {
     outline: 0;
     border-bottom: 2px solid #1976d2;
@@ -26,6 +32,10 @@ const Label = styled.label`
   top: 16px;
   transition: all 2s ease-in;
   color: #1976d2;
+  @media screen and (max-width: 700px) {
+    left: 25px;
+    top: 26px;
+  }
 `;
 
 const Container = styled.div`
@@ -38,6 +48,11 @@ const Container = styled.div`
   display: block;
   margin: 2rem;
   padding: 25px;
+
+  @media screen and (max-width: 700px) {
+    padding: 5px;
+    margin: 1rem;
+  }
 `;
 
 export default ({ onSubmit }) => {
