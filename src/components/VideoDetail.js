@@ -2,6 +2,14 @@ import React from "react";
 import ClipLoader from "react-spinners/ClipLoader";
 import styled from "styled-components";
 
+const Main = styled.div`
+  width: 120%;
+
+  @media screen and (max-width: 992px) {
+    width: 100%;
+  }
+`;
+
 const Container = styled.div`
   box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2),
     0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
@@ -50,7 +58,7 @@ export default ({ video }) => {
   const src = `https://www.youtube.com/embed/${video.id.videoId}`;
 
   return (
-    <div style={{ width: "100%%" }}>
+    <Main>
       <Container style={{ height: "60%" }}>
         <iframe
           frameBorder="0"
@@ -66,6 +74,6 @@ export default ({ video }) => {
         </Title>
         <Desc>{video.snippet.description}</Desc>
       </Container>
-    </div>
+    </Main>
   );
 };
