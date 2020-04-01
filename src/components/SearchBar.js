@@ -15,7 +15,7 @@ const Search = styled.input`
   cursor: text;
   font-size: inherit;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 992px) {
     padding: 10px 0px;
     overflow: hidden;
   }
@@ -32,7 +32,7 @@ const Label = styled.label`
   top: 16px;
   transition: all 2s ease-in;
   color: #1976d2;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 992px) {
     left: 25px;
     top: 26px;
   }
@@ -49,7 +49,7 @@ const Container = styled.div`
   margin: 2rem;
   padding: 25px;
 
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 992px) {
     padding: 5px;
     margin: 1rem;
   }

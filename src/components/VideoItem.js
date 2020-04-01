@@ -14,6 +14,9 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   cursor: pointer;
+  @media screen and (max-width: 992px) {
+    width: 60%;
+  }
 `;
 
 const Img = styled.img`

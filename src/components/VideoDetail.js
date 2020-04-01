@@ -19,11 +19,13 @@ const Title = styled.div`
 `;
 
 const Center = styled.div`
-  width: 90vw;
+  // width: 90vw;
   height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  @media screen and (max-width: 992px) {
+  }
 `;
 
 export default ({ video }) => {
@@ -38,7 +40,7 @@ export default ({ video }) => {
   const src = `https://www.youtube.com/embed/${video.id.videoId}`;
 
   return (
-    <div style={{ width: "130%" }}>
+    <div style={{ width: "100%%" }}>
       <Container style={{ height: "60%" }}>
         <iframe
           frameBorder="0"

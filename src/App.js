@@ -10,6 +10,9 @@ import VideoList from "./components/VideoList";
 const Flex = styled.div`
   display: flex;
   width: 100%;
+  @media screen and (max-width: 992px) {
+    flex-direction: column;
+  }
 `;
 
 export default () => {
