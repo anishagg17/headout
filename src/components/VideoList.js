@@ -8,7 +8,7 @@ const Flex = styled.div`
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 100%;
+  // width: 100%;
   margin: 2rem 0;
   width: fit-content;
   @media screen and (max-width: 992px) {

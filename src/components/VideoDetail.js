@@ -19,6 +19,9 @@ const Container = styled.div`
   background-color: #fff;
   display: block;
   margin: 2rem;
+  @media screen and (max-width: 992px) {
+    margin: 1.5rem;
+  }
 `;
 
 const Desc = styled.div`
@@ -68,7 +71,7 @@ export default ({ video }) => {
           src={src}
         />
       </Container>
-      <Container style={{ padding: "15px" }}>
+      <Container style={{ padding: "13px" }}>
         <Title>
           {video.snippet.title} <b>{video.snippet.channelTitle}</b>
         </Title>
