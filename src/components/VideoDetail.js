@@ -34,6 +34,7 @@ const Center = styled.div`
   align-items: center;
   justify-content: center;
   @media screen and (max-width: 992px) {
+    width: 100vw;
   }
 `;
 
