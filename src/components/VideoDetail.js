@@ -28,7 +28,7 @@ const Title = styled.div`
 `;
 
 const Center = styled.div`
-  // width: 90vw;
+  width: 90vw;
   height: 70vh;
   display: flex;
   align-items: center;
